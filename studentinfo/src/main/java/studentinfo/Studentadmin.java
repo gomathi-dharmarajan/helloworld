@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+//@entity defines this Studentadmin class as a table..
 @Entity(name="Studentadmin")
+//@Table is used to specify the table name..
 @Table(name="admin")
 
 public class Studentadmin {
@@ -22,6 +25,7 @@ public class Studentadmin {
 	}
 	
 @Id
+//@id is mandatory and it must be declared before a primary key column
 	@Column(name="name",nullable=false)
 	public String getName() {
 		return name;

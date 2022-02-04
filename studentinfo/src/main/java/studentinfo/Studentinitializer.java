@@ -14,7 +14,7 @@ public class Studentinitializer {
 		// TODO Auto-generated method stub
 		
 SpringApplication.run(Studentinitializer.class);
-log.info("welcome");
+log.info("Started....");
 	}
 
 }
