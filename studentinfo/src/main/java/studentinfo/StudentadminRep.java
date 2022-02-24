@@ -1,5 +1,7 @@
 package studentinfo;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Query;
 
 //Crud repository is used to work with the database.. Create,Read,Update and delete operations..
@@ -8,9 +10,8 @@ import org.springframework.data.jpa.repository.Query;
 //If we want to use crudrepository we need to create one interface and extend crud repository with the entity name and datatype..
 import org.springframework.data.repository.CrudRepository;
 
-public interface StudentRep extends CrudRepository<Studentadmin,String> {
+public interface StudentadminRep extends CrudRepository<Studentadmin,String> {
 
 	@Query(value ="SELECT * FROM admin WHERE name = ?1",nativeQuery = true)
 	public Studentadmin findbyCollateId(String name);
-
 }

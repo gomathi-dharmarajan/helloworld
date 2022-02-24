@@ -15,6 +15,9 @@ public class Studentadmin {
 	
 	private String name;
 	private String password;
+	/*default constructor is must.. If we dont create it, it will throw runtime exception
+	 * Default constructor is missing..
+	 */
 	public Studentadmin() {
 		
 	}
@@ -24,8 +27,11 @@ public class Studentadmin {
 		this.password = password;
 	}
 	
-@Id
-//@id is mandatory and it must be declared before a primary key column
+	/*@id is mandatory and it must be declared before a primary key column. If we omit it, it will throw beancreationException
+	error creating bean with name 'entitymanagerfactory'.. We can have it before any of the column*/
+
+	@Id
+
 	@Column(name="name",nullable=false)
 	public String getName() {
 		return name;
